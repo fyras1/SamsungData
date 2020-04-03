@@ -46,4 +46,4 @@ names(final_ds)[1:2]<-c("Subject","Activity")
 # don't execute this line if you want the table sorted by the activity.
 final_ds<-arrange(final_ds,final_ds$Subject,final_ds$Activity)
 
-write.table(final_ds,"tidy_data.txt", row.names = FALSE)
+write.table(final_ds,"tidy_data.txt", row.name = FALSE)
