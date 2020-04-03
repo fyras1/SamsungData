@@ -3,8 +3,13 @@
 ## Data source
 Original data and description for this project can be found at : [Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
 
-## Goal :
+## Goal : 
 using the messy data mentioned above , we create a new tidy data file containing the averages of the variables by subject and activity
+
+## Output files :
+* **run_analysis.R** : the R script that will extract and tidy the given data
+* **README.md** : a md file that explains the evnironment (*data source* , *files* , *scripts*,...) as well as the thought process behind the script.
+* **CodeBook** : a md file that describes the original data and numerates the new variables in the tidy data set
 
 ## libraries used :
 * base R 
