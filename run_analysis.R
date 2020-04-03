@@ -35,7 +35,7 @@ ds$Subject<-as.factor(ds$Subject)
 
 #We extract only the mean and std variables that have "mean()" or "std()" in their name.
 #with exception to the Subject and Activity variables
-arr<-grepl("mean()|std()|Subject|Activity",names(ds))
+arr<-grepl("mean\\(\\)|std\\(\\)|Subject|Activity",names(ds))
 ds<-ds[,arr]
 
 #we use the aggregate function to calculate the averages of all the variables by the group (Subject,Activi)
