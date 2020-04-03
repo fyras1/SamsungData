@@ -30,6 +30,9 @@ ds[,2]<-factor(ds[,2],levels=c(1,2,3,4,5,6),labels=ac_lb[,2])
 #We name the first two varibales "Subject" and "Activity"
 names(ds)<-c("Subject","Activity",feat[,2])
 
+#We transform ds$Subject into a Factor instead of a numeric vector
+ds$Subject<-as.factor(ds$Subject)
+
 #We extract only the mean and std variables that have "mean()" or "std()" in their name.
 #with exception to the Subject and Activity variables
 arr<-grepl("mean()|std()|Subject|Activity",names(ds))
@@ -39,6 +42,8 @@ ds<-ds[,arr]
 final_ds<-aggregate(ds[,c(-1,-2)], list(ds$Subject,ds$Activity), mean)
 names(final_ds)[1:2]<-c("Subject","Activity")
 
-write.table(final_ds,"tidy_data.txt", row.name = FALSE)
+# This line will arrange the rows so its sorted by the "Subject" variable first , then the Activity second
+# don't execute this line if you want the table sorted by the activity.
+final_ds<-arrange(final_ds,final_ds$Subject,final_ds$Activity)
 
-
+write.table(final_ds,"tidy_data.txt", row.names = FALSE)

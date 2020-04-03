@@ -1,7 +1,15 @@
 # SamsungData
 
-## libraries:
+## Data source
+Original data and description for this project can be found at : [Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
+
+## Goal :
+using the messy data mentioned above , we create a new tidy data file containing the averages of the variables by subject and activity
+
+## libraries used :
+* base R 
 * dplyr
+
 
 ## steps:
 * first we read all the necessary files using the read.table() function
