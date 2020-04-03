@@ -1,9 +1,9 @@
 # SamsungData
 
-##libraries:
+## libraries:
 * dplyr
 
-##steps:
+## steps:
 * first we read all the necessary files using the read.table() function
 * We add the "Subject" and "Activity"" columns to the "x_train" and the "x_test" accordingly
 * we merge both subsets in data frame named "ds"
