@@ -39,4 +39,6 @@ ds<-ds[,arr]
 final_ds<-aggregate(ds[,c(-1,-2)], list(ds$Subject,ds$Activity), mean)
 names(final_ds)[1:2]<-c("Subject","Activity")
 
+write.table(final_ds,"tidy_data.txt", row.name = FALSE)
+
 
